@@ -11,6 +11,8 @@ import 'app_state.dart'; // new
 import 'src/authentication.dart'; // new
 import 'src/widgets.dart';
 
+import 'guest_book.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -25,6 +27,13 @@ class HomePage extends StatelessWidget {
           const IconAndDetail(Icons.calendar_today, 'October 30'),
           const IconAndDetail(Icons.location_city, 'San Francisco'),
           // Add from here
+          const Header("What we'll be doing"),
+          const Paragraph(
+            'Join us for a day full of Firebase Workshops and Pizza!',
+          ),
+          // Add the following two lines.
+          const Header('Discussion'),
+          GuestBook(addMessage: (message) => print(message)),
           Consumer<ApplicationState>(
             builder: (context, appState, _) => AuthFunc(
               // new
