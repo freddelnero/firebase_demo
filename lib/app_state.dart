@@ -75,6 +75,7 @@ class ApplicationState extends ChangeNotifier {
                   GuestBookMessage(
                     name: document.data()['name'] as String,
                     message: document.data()['text'] as String,
+                    color: document.data()['color'] as MaterialAccentColor,
                   ),
                 );
               }
