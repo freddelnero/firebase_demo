@@ -112,7 +112,7 @@ class ApplicationState extends ChangeNotifier {
       throw Exception('Must be logged in');
     }
 
-    return FirebaseFirestore.instance.collection('guestbook').add(
+    return FirebaseFirestore.instance.collection("guestbook").add(
       <String, dynamic>{
         'text': message,
         'timestamp': DateTime.now().millisecondsSinceEpoch,
